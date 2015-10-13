@@ -10,6 +10,9 @@ require "socket"
 # every 10 seconds. Using the grok filter and this output, it is possible to
 # capture the metric values from the logs and emit them to KairosDB.
 class LogStash::Outputs::KairosDB < LogStash::Outputs::Base
+  
+  milestone 1 
+
   config_name "kairosdb"
 
   EXCLUDE_ALWAYS = [ "@timestamp", "@version" ]
